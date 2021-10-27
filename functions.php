@@ -44,37 +44,40 @@ add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 
 function two_player_bowling_game() {
-    $frames = array(1,2,3,4,5,6,7,8,9,10);
+
+    $frames = array( 1,2,3,4,5,6,7,8,9,10 );
+
     $players = array(
         "player1" => 0,
         "player2" => 0,
     );
 
-    foreach($players as $current_player => $player_points) {
+    foreach( $players as $current_player => $player_points ) {
 
         $scores = array();
 
-        foreach($frames as $frame)
+        foreach( $frames as $frame )
         {
-            $frameScore = rand(0, 10);
-            echo nl2br ("In frame " . $frame . ", " . $current_player . " scored " . $frameScore . "." . "\n");
+            $frameScore = rand( 0, 10 );
+            echo nl2br ( "In frame " . $frame . ", " . $current_player . " scored " . $frameScore . "." . "\n" );
+
             array_push($scores, $frameScore);
 
-            if ($frameScore % 2 == 0) {
+            if ( $frameScore % 2 == 0 ) {
                 echo nl2br ("that is an even number \n");
             } else {
                 echo nl2br ("that is an odd number \n");
             }
         }
         
-        $players[$current_player] = array_sum($scores);
+        $players[$current_player] = array_sum( $scores );
 
         echo "<p>In total, " . $current_player . " scored " . $players[$current_player] . "</p><br>";
 
-        if ($players[$current_player] % 2 == 0) {
-            echo nl2br ("that is an even number \n \n \n");
+        if ( $players[$current_player] % 2 == 0 ) {
+            echo nl2br ( "that is an even number \n \n \n" );
         } else {
-            echo nl2br ("that is an odd number \n \n \n");
+            echo nl2br ( "that is an odd number \n \n \n" );
         }
     }
 

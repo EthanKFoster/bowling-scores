@@ -82,8 +82,10 @@ Whoever one state "player X won"
 
         if ( $players["player1"] > $players["player2"] ) {
             echo "Player 1 won!!!"; 
+        } elseif ( $players["player1"] == $players["player2"] ) {
+            echo "Wow what a coincidence; it's a tie!";
         } else {
-            echo "Player 2 won!!!";
+            echo "Player 2 won!!!!";
         }
            
 ?>

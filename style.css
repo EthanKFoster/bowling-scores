@@ -1,0 +1,41 @@
+/*
+Theme Name: Bowling Scores
+Theme URI: 
+Author: Ethan Foster
+Author URI: github.com/EthanKFoster
+Description: This theme is designed to accommodate the challenge received from Miles Sebesta to create a bowling alley score sheet. 
+Tags: app, simple, full-width, responsive, mobile-friendly, block-styles, featured-images, accessibility-ready
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 
+Requires PHP: 7.0
+License: GNU General PUblic License v2 or Later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bowlingscores
+This theme is licensed under the GPL. 
+Use it to keep track of bowling scores and have fun learning PHP.
+*/
+
+* {
+    padding: none;
+    margin: none;
+}
+
+header, main, footer {
+    margin: auto;
+    padding: auto;
+    height: 30%;
+    width: auto;
+}
+
+header {
+    background-color: rgb(170, 170, 255);
+}
+
+main {
+    background-color: #e2ffc5;
+}
+
+footer {
+    background-color: rgb(255, 141, 164);
+}
